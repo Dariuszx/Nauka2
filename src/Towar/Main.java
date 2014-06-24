@@ -1,5 +1,7 @@
 package Towar;
 
+import java.lang.reflect.Constructor;
+
 class Towar implements Comparable<Towar> {
 
     private String nazwa;
@@ -67,6 +69,7 @@ class Towar implements Comparable<Towar> {
 public class Main {
 
     public static void main( String[] args ) {
+
 
 
     }
