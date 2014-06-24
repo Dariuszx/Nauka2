@@ -1,6 +1,7 @@
 package Towar;
 
 import java.lang.reflect.Constructor;
+import java.util.ArrayList;
 
 class Towar implements Comparable<Towar> {
 
@@ -69,6 +70,32 @@ class Towar implements Comparable<Towar> {
 public class Main {
 
     public static void main( String[] args ) {
+
+        ArrayList<String> listaUczniow = new ArrayList<String>();
+
+        listaUczniow.add( "Dariusz Dybka" );
+        listaUczniow.add( "Jan Kowalski" );
+        listaUczniow.add( "Przemysław Rzedkowski" );
+
+        int i = 0;
+
+        for ( String s : listaUczniow ) {
+
+            if( s.equals( "Jan Kowalski" ) ) {
+                break;
+            }
+
+            i++;
+
+        }
+
+        listaUczniow.remove( i );
+
+        for( String s : listaUczniow ) {
+
+            System.out.println( s );
+        }
+
 
 
 
