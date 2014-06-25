@@ -61,6 +61,9 @@ class Towar implements Comparable<Towar> {
 
     @Override
     public int hashCode() {
+
+        int h = nazwa.hashCode();
+
         return (int)(nazwa.hashCode() / 12 % 51);
     }
 }

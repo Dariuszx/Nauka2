@@ -67,8 +67,14 @@ class AlgVector {
 
             for ( int i=0; i < lenght(); i++ ) {
 
-                if( get( i ) != ((AlgVector)o).get( i ) ) return false;
+
+                if( wektor.get( i ).doubleValue() != ((AlgVector)o).get( i ).doubleValue() ) {
+                    return false;
+                }
+
+
             }
+
             return true;
 
         } else return false;
@@ -77,8 +83,19 @@ class AlgVector {
     @Override
     public int hashCode() {
 
+        String napis = "";
 
-        return 0;
+        napis = Integer.toString( wektor.size() );
+
+        int i=0;
+
+        for( Double d : wektor ) {
+            napis += "[" + i + "] = " + Double.toString( d ) + " ";
+            i++;
+        }
+
+
+        return wektor.hashCode();
     }
 
 }
@@ -95,12 +112,20 @@ public class Main {
         wektor1.set( 123.23 );
         wektor1.set( 323.32 );
 
-        wektor2.set( 321.3 );
-        wektor2.set( 43.2 );
+        wektor2.set( 123.23 );
+        wektor2.set( 323.32 );
+        wektor2.set( 323.32 );
+
+        System.out.println( "Wypisuje 2 wektory" );
 
         System.out.println( wektor1.toString() );
         System.out.println( wektor2.toString() );
 
+        System.out.println( "Wyswietlam kolejno ich hash" );
+        System.out.println( wektor1.hashCode() );
+        System.out.println( wektor2.hashCode() );
+
+        System.out.println( "Porównuje wektory" );
         System.out.println( wektor1.equals( wektor2 ));
 
         try {
@@ -109,6 +134,7 @@ public class Main {
             e.printStackTrace();
         }
 
+        System.out.println( "Wypisuje wektor pierwszy po dodadaniu go do wektoru drugiego" );
         System.out.println( wektor1 );
 
     }

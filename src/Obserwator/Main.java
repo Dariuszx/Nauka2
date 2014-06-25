@@ -12,7 +12,7 @@ public class Main {
             public void run() {
                 Okno o = new Okno();
 
-                Lista lista = new Lista();
+                Lista lista = new Lista( o );
 
                 o.dodajObserwatora( lista );
 

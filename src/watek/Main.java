@@ -14,14 +14,16 @@ public class Main {
     public static void main( String[] args ) {
 
 
-        SwingUtilities.invokeLater( new Runnable() {
-            @Override
-            public void run() {
+        
 
-            }
-        });
-           TowarTest test = new TowarTest();
-        test.setUp();
+        String a = "dadas";
+
+        char[] b = a.toCharArray();
+
+        for( int i =0; i < b.length; i++ ) {
+            System.out.println( b[i] );
+        }
+
 
 
     }

@@ -11,7 +11,7 @@ public class Okno extends JFrame implements Obserwowany {
 
 
     private List<Obserwator> listaObserwatorow = new ArrayList<Obserwator>();
-    private JTextField input = new JTextField();
+    public JTextField input = new JTextField();
 
     public Okno() {
 
@@ -58,7 +58,7 @@ public class Okno extends JFrame implements Obserwowany {
     public void powiadomObserwatorow() {
 
         for ( Obserwator o : listaObserwatorow ) {
-            o.aktualizuj( this );
+            o.aktualizuj();
         }
     }
 

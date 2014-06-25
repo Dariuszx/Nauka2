@@ -3,6 +3,7 @@ package flyweight;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 class FabrykaElementowGraficzny {
 
@@ -45,6 +46,14 @@ public class Main {
 
         FabrykaElementowGraficzny fabryka = new FabrykaElementowGraficzny();
         ArrayList<GraphicObject> document = new ArrayList<GraphicObject>();
+        HashSet<String> test = new HashSet<String>();
+
+        test.add( "darek" );
+        test.add( "dybka" );
+
+
+
+
 
         document.add( fabryka.getElement( 'd', "Arial" ) );
         document.add( fabryka.getElement( "/home/dariusz/test", 100, 200 ) );
